@@ -1,0 +1,15 @@
+{
+	"NAME" : "prénom",
+	"NAME_ERROR" : "Le nom est requis",
+	"NAME_PLACEHOLDER" : "Entrez le nom",
+	"ENGLISH":"Anglais",
+	"FRENCH":"français",
+	"EMAIL":"Email",
+	"EMAIL_PLACEHOLDER":"Entrez un courrier électronique",
+	"EMAIL_ERROR" : "Entrez l'ID de courrier électronique correct",
+	"PASSWORD":"Mot de passe",
+	"PASSWORD_PLACEHOLDER" : "Veuillez entrer le mot de passe",
+	"PASSWORD_PATTERN_ERROR" : "Entrez au moins une lettre majuscule, une lettre minuscule, un chiffre, une lettre de cas spécial et une longueur devrait être min. 8 char.",
+	"PASSWORD_ERROR":"Veuillez entrer le mot de passe",
+	"CANCEL" : "Annuler"
+}

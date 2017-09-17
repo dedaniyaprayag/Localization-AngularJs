@@ -1,0 +1,70 @@
+<!Doctype Html>
+
+<html>
+	<head>
+		<title> Use Of $translate Service </title>
+
+		<!-- Css Lib -->
+		<link rel = "stylesheet" type = "text/css" href = "node_modules/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel = "stylesheet" type = "text/css" href = "css/custom.css" />
+
+		<!-- JS Lib -->
+		<script type = "text/javascript" src= "node_modules/jquery/dist/jquery.min.js"></script>
+		<script type = "text/javascript" src= "node_modules/angular/angular.min.js"></script>
+		<script type = "text/javascript" src= "node_modules/angular-translate/dist/angular-translate.min.js
+"></script>
+		<script type = "text/javascript" src= "app.js"></script>
+		<script type = "text/javascript" src= "LanguageService.js"></script>
+		<script type = "text/javascript" src= "controllers/TranslateController.js"></script>
+
+
+	</head>
+	<body ng-app = "TranslateApp" ng-controller = "TranslateController as translateCtrl" class = "body-backgroud margin-top">
+		<div class = "container">
+			<form name = "frmValidation" novalidate>
+
+				<!-- Name -->
+				<div class = "row">
+					<div class = "col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<div class = "form-group" ng-class = "{'has-error':frmValidation.name.$invalid && !frmValidation.name.$pristine}">
+							<label for = "Name">{{'NAME' | translate}}</label>
+							<input type = "text" class = "form-control" name = "name" placeholder = "{{'NAME_PLACEHOLDER' | translate}}" ng-model = "translateCtrl.name" required/>
+							<p ng-show = "frmValidation.name.$invalid && !frmValidation.name.$pristine" class = "help-block">{{'NAME_ERROR' | translate}}</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Email -->
+				<div class = "row">
+					<div class = "col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<div class = "form-group" ng-class = "{'has-error':frmValidation.email.$invalid && !frmValidation.email.$pristine}">
+							<label for = "Email">{{'EMAIL' | translate}}</label>
+							<input type = "email" class ="form-control" name = "email" ng-model ="translateCtrl.email" ng-class = "translateCtrl.email" placeholder ="{{'EMAIL_PLACEHOLDER' | translate}}" />
+							<p ng-show = "frmValidation.email.$invalid && !frmValidation.emil.$pristine" class = "help-block">{{'EMAIL_ERROR' | translate}}</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Password -->
+				<div class = "row">
+					<div class = "col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<div class ="form-group" ng-class = "{'has-error': frmValidation.password.$invalid && !frmValidation.password.$pristine}">
+							<label for = "password">{{'PASSWORD' | translate}}</label>
+							<input type = "password" class = "form-control" name = "password" ng-class = "translateCtrl.password" ng-model = "translateCtrl.password" ng-pattern = "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/" placeholder =  "{{'PASSWORD_PLACEHOLDER' | translate}}" required />
+							<p ng-show = "frmValidation.password.$error.pattern" class = "help-block">{{'PASSWORD_PATTERN_ERROR' | translate}}</p>
+							<p ng-show = "frmValidation.password.$invalid && !frmValidation.password.$pristine && !frmValidation.password.$error.pattern" class = "help-block">{{'PASSWORD_ERROR' | translate}}</p>
+						</div>
+					</div>
+				</div>
+
+				<div class = "row">
+					<div class = "col-sm-8 col-xs-8 col-md-8 col-lg-8 form-col-pad">
+						<button type = "submit" name = "btnSubmitEnglish" id = "btnSubmit" class = "btn btn-primary" ng-click = "translateCtrl.changeLanguage('en')">{{'ENGLISH' | translate}} </button>
+						<button type = "submit" name = "btnSubmitGerman" id = "btnSubmit" class = "btn btn-primary" ng-click = "translateCtrl.changeLanguage('fr')">{{'FRENCH' | translate}}</button>
+						<button type = "button" name = "btnCancel" id = "btnSubmit" class = "btn btn-cancel" ng-click = "translateCtrl.cancel()">{{'CANCEL' | translate}}</button>	
+					</div> 
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+{
+	"NAME" : "Name",
+	"NAME_ERROR" : "Name is required",
+	"NAME_PLACEHOLDER" : "Please Enter Name",
+	"ENGLISH":"English",
+	"FRENCH":"French",
+	"EMAIL":"Email",
+	"EMAIL_PLACEHOLDER":"Please Enter Email",
+	"EMAIL_ERROR" : "Please enter correct email Id",
+	"PASSWORD":"Password",
+	"PASSWORD_PLACEHOLDER" : "Please Enter Password",
+	"PASSWORD_PATTERN_ERROR" : "Please Enter atleast one uppercase letter,one lowercase letter,one digit,one special case letter & length should be min 8 char.",
+	"PASSWORD_ERROR":"Please Enter Password",
+	"CANCEL" : "Cancel"
+}
